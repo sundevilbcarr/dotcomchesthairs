@@ -53,6 +53,12 @@ section {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 600px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .video-tile video {
   width: 100%;
   height: auto;
@@ -74,6 +80,9 @@ section {
   }
   .gallery img, .videos video {
     max-width: 100%;
+  }
+  section.videos {
+    margin-bottom: 1rem;
   }
 }
 .footer-text {
