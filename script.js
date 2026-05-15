@@ -28,3 +28,36 @@
 			countElement.textContent = "Unavailable";
 		});
 })();
+
+(function enableHoverVideoPreviews() {
+	var supportsHover = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+	if (!supportsHover) {
+		return;
+	}
+
+	var videoTiles = document.querySelectorAll(".video-tile video");
+	videoTiles.forEach(function(video) {
+		var hoverPreviewActive = false;
+
+		video.addEventListener("mouseenter", function() {
+			if (video.paused) {
+				hoverPreviewActive = true;
+				video.play().catch(function() {
+					hoverPreviewActive = false;
+				});
+			}
+		});
+
+		video.addEventListener("mouseleave", function() {
+			if (hoverPreviewActive) {
+				video.pause();
+				video.currentTime = 0;
+				hoverPreviewActive = false;
+			}
+		});
+
+		video.addEventListener("play", function() {
+			hoverPreviewActive = false;
+		});
+	});
+})();
