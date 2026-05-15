@@ -1,22 +1,26 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f7f7f7;
+  background: #D2B48C; /* Tan */
   margin: 0;
   padding: 0;
-  color: #222;
+  color: #4A403A; /* Earthy brown */
 }
 header {
-  background: #222;
-  color: #fff;
-  padding: 2rem 1rem 1rem 1rem;
+  background: #8B4513; /* Saddle Brown */
+  color: #FFF8E7; /* Light cream */
+  padding: 2rem 1rem;
   text-align: center;
+}
+.header-logo {
+  max-width: 150px;
+  margin-bottom: 1rem;
 }
 main {
   max-width: 700px;
   margin: 2rem auto;
-  background: #fff;
+  background: #FFF8E7; /* Light cream */
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   padding: 2rem;
 }
 section {
@@ -89,4 +93,10 @@ section {
   text-align: center;
   color: #888;
   font-size: 0.9em;
+}
+footer {
+  background: #A0522D; /* Sienna */
+  color: #FFF;
+  text-align: center;
+  padding: 1rem;
 }
