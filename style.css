@@ -12,8 +12,10 @@ header {
   text-align: center;
 }
 .header-logo {
-  max-width: 150px;
-  margin-bottom: 1rem;
+  width: min(220px, 48vw);
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem auto;
 }
 main {
   max-width: 700px;
@@ -126,6 +128,9 @@ section {
 @media (max-width: 600px) {
   main {
     padding: 1rem;
+  }
+  .header-logo {
+    width: min(170px, 60vw);
   }
   .feature-copy h2 {
     font-size: 1.3rem;
